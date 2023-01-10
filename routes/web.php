@@ -19,7 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/users/list', [UserController::class, 'index']);
+Route::get('/users/list', [UserController::class, 'index'])->middleware('auth');
 
 Auth::routes();
 
